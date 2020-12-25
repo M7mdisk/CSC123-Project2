@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>M-Tech</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+  integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.24/dist/shoelace/shoelace.css">
+<script type="module"
+  src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.24/dist/shoelace/shoelace.esm.js"></script>
+
+<style>
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Poppins", sans-serif
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .w3-half img {
+    margin-bottom: -6px;
+    margin-top: 16px;
+    opacity: 0.8;
+    cursor: pointer
+  }
+
+  .w3-half img:hover {
+    opacity: 1
+  }
+</style>
+
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;"
+    id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+      style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container ">
+      <div class="w3-padding-64">
+        <h2 style="font-size: 30px;"><b>M-tech</b></h1>
+          <hr>
+        <h4><b>Technology Store</b></h4>
+      </div>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+      <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a>
+      <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Products</a>
+      <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a>
+      <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Filmography</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+    <a href="javascript:void(0)" class="w3-button w3-blue w3-margin-right" onclick="w3_open()">☰</a>
+    <span>M-Tech</span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:80px" id="showcase">
+      <h1 class="w3-jumbo" style="margin-bottom: 1em;"><b>M-Tech</b>:
+        <hr> the best technology store
+      </h1>
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Showcase.</b></h1>
+      <hr style="width:50px;border:5px solid #219fff" class="w3-round">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top:19px;">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="products.html"><img
+                src="https://m.xcite.com/media/wysiwyg/banners-kw-xvii/20201111-Lenovo-ThinkPad-EN-DP.jpg"
+                class="d-block w-100"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="products.html"><img
+                src="https://m.xcite.com/media/wysiwyg/banners-kw-xvii/22112020-huawei-mega--EN-DP.jpg"
+                class="d-block w-100"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="products2.html"><img src="images/slider1.jpg" class="d-block w-100"></a>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="w3-container" id="services" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Products.</b></h1>
+      <hr style="width:50px;border:5px solid #219fff" class="w3-round">
+      <div class="products-container" style="padding-top: 20px;">
+        <sl-card class="card-overview">
+          <img slot="image" src="images/p1.jpg"
+            alt="A kitten sits patiently between a terracotta pot and decorative grasses.">
+
+          <strong>IPHONE 11</strong><br>
+          Apple iPhone 11 Pro 64GB Phone - Midnight Green<br>
+          <small>200 left in stock</small>
+
+          <div slot="footer">
+            <sl-button type="primary" onclick="location.href='productinfo.html'"  pill>More Info</sl-button>
+            <sl-rating value="4.5"></sl-rating>
+          </div>
+        </sl-card>
+        <sl-card class="card-overview">
+          <img slot="image"
+          src="images/p2.jpg"
+          alt="A kitten sits patiently between a terracotta pot and decorative grasses.">
+
+          <strong>Samsung S20</strong><br>
+          Samsung S20 Fan edition 256GB - Navy<br>
+          <small>300 left in stock</small>
+
+          <div slot="footer">
+            <sl-button type="primary" pill>More Info</sl-button>
+            <sl-rating value="3.5"></sl-rating>
+          </div>
+        </sl-card>
+        <sl-card class="card-overview">
+          <img slot="image"
+          src="images/p3.jpg"            alt="A kitten sits patiently between a terracotta pot and decorative grasses.">
+
+          <strong>Nova 5T</strong><br>
+          Huawei Nova 5T 128GB Phone - Blue<br>
+          <small>300 left in stock</small>
+
+          <div slot="footer">
+            <sl-button type="primary" pill>More Info</sl-button>
+            <sl-rating value="2.5"></sl-rating>
+          </div>
+        </sl-card>
+        <sl-card class="card-overview">
+          <img slot="image"
+          src="images/p4.jpg"            alt="A kitten sits patiently between a terracotta pot and decorative grasses.">
+
+          <strong>Galaxy Fold</strong><br>
+          Samsung Galaxy Fold 256GB - Black<br>
+          <small style="color:red">0 left in stock</small>
+
+          <div slot="footer">
+            <sl-button type="primary" pill>More Info</sl-button>
+            <sl-rating value="5"></sl-rating>
+          </div>
+        </sl-card>
+        <sl-card class="card-overview">
+          <img slot="image"
+          src="images/p5.jpg"            alt="A kitten sits patiently between a terracotta pot and decorative grasses.">
+
+          <strong>Huawei MATE 30 Pro</strong><br>
+          Huawei MATE 30 Pro 64GB Phone - Orange<br>
+          <small>100 left</small>
+
+          <div slot="footer">
+            <sl-button type="primary" pill>More Info</sl-button>
+            <sl-rating value="4.5"></sl-rating>
+          </div>
+        </sl-card>
+
+      </div>
+
+    </div>
+
+    <!-- Designers -->
+    <div class="w3-container" id="designers" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-blue"><b>About us.</b></h1>
+      <hr style="width:50px;border:5px solid #219fff" class="w3-round">
+      <section class="text-gray-700 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div  class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img style="border: 1px solid black;" class="object-cover object-center rounded" alt="hero" src="https://media.istockphoto.com/photos/happy-african-american-businessman-using-phone-mobile-apps-at-picture-id1150384559?k=6&m=1150384559&s=612x612&w=0&h=CqDBWLb7o5b-xGXcFyX1T0JaUFAcSKkSsVrH50eLZfc=">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Who are we?
+            </h1>
+            <p class="mb-8 leading-relaxed">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum..</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="two" class="wrapper style1 special">
+      <div class="inner">
+        <header>
+          <h2>Our Team</h2>
+          <p>Specialized, Professional, yknow</p>
+        </header>
+        <div class="flex flex-4">
+          <div class="box person">
+            <div class="image round">
+              <img src="images/pic03.jpg" alt="Person 1" />
+            </div>
+            <h3>Magna</h3>
+            <p>Cipdum dolor</p>
+          </div>
+          <div class="box person">
+            <div class="image round">
+              <img src="images/pic04.jpg" alt="Person 2" />
+            </div>
+            <h3>Ipsum</h3>
+            <p>Vestibulum comm</p>
+          </div>
+          <div class="box person">
+            <div class="image round">
+              <img src="images/pic05.jpg" alt="Person 3" />
+            </div>
+            <h3>Tempus</h3>
+            <p>Fusce pellentes</p>
+          </div>
+          <div class="box person">
+            <div class="image round">
+              <img src="images/pic06.jpg" alt="Person 4" />
+            </div>
+            <h3>Dolore</h3>
+            <p>Praesent placer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Packages / Pricing Tables -->
+    <div class="w3-container" id="packages" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Filmography.</b></h1>
+      <hr style="width:50px;border:5px solid #219fff; margin-bottom: 20px;" class="w3-round">
+      <iframe width="90%" height="700px" src="https://www.youtube.com/embed/k9SS89Lvlo4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+    <!-- Contact -->
+    <div class="w3-container" id="contact" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Contact.</b></h1>
+      <hr style="width:50px;border:5px solid #219fff" class="w3-round">
+
+        <section class="text-gray-700 body-font relative" style="margin-top: 20px;">
+          <div class="absolute inset-0 bg-gray-300">
+            <iframe width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="map" scrolling="no" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Gust&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+          </div>
+          <div class="container px-5 py-24 mx-auto flex">
+            <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
+              <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+              <p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+              <div class="relative mb-4">
+                <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+              <div class="relative mb-4">
+                <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+              </div>
+              <button class="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send us a message!</button>
+              <p class="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+            </div>
+          </div>
+        </section>
+    </div>
+
+    <!-- End page content -->
+  </div>
+
+  <!-- W3.CSS Container -->
+  <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+    <p class="w3-right">Poweblue by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+        class="w3-hover-opacity">w3.css</a></p>
+  </div>
+
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+  </script>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</html>
